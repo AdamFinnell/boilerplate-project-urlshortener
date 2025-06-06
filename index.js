@@ -45,7 +45,7 @@ app.post('/api/shorturl', (req, res) => {
 });
 
 
-app.get('https://shorten-the-url.onrender.com/', (req, res) => {
+app.get('/api/shorturl/:shortUrl', (req, res) => {
   const shortUrl = parseInt(req.params.shortUrl);
   const originalUrl = urlDatabase[shortUrl];
 
